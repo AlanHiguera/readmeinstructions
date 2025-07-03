@@ -18,3 +18,7 @@ class Config {
 "api/tienda"; Entrega los atributos de todas las tiendas una por una.
 "api/seguimientotienda"; Este Entrega la id del seguidor y el id de la tienda que sigue.
 "api/tienda/ObtenerProducto/ Recibe un producto y retorna la tienda a la que pertenece(toda la tienda no solo id)
+"api/producto"; Entrega todos los productos de la base de datos que sean visibles
+"api/producto/obtenerproductomain"; obtiene un producto del main sin todos los atributos, solo precio, nombre, e imagen ('Nomprod', 'Precio', 'FotoProd')
+"api/productoadmin/"; obtiene todos los productos que no sean visibles en la base de datos
+"api/productoadmin/obtenerproductomain"; obtiene todos los productos que no sean visibles en la base de datos con atributos ('Nomprod', 'Precio', 'FotoProd')
