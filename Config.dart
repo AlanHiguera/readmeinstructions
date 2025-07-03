@@ -1,6 +1,8 @@
 class Config {
   static const String appName = "Handmade Geeks";
   static const String apiURL = '192.168.1.91';
+
+  // Endpoints básicos de modelos
   static const obtenerProductoMainAPI = "api/producto/obtenerproductomain";
   static const productoAPI = "api/producto";
   static const tiendaAPI = "api/tienda";
@@ -13,4 +15,45 @@ class Config {
   static const tipocategoriaAPI = "api/tipocategoria";
   static const carritoAPI = "api/carrito";
   static const seguimientotiendaAPI = "api/seguimientotienda";
+
+  // Endpoints específicos de TIENDA
+  static const tiendaObtenerProductoAPI = "api/tienda/ObtenerProducto/";
+  static const tiendaBuscarAPI = "api/tienda/buscar";
+  static const tiendaObtenerImgNomTiendaPorProductoAPI =
+      "api/tienda/ObtenerImgNomTiendaPorProducto";
+  static const tiendaCrearTiendaAPI = "api/tienda/CrearTienda";
+  static const tiendaObtenerDetallesTiendaAPI =
+      "api/tienda/ObtenerDetallesTienda";
+
+  // Endpoints específicos de SEGUIMIENTO TIENDA
+  static const seguimientoObtenerListaTiendasSeguidasPorUsuarioAPI =
+      "api/SeguimientoTienda/ObtenerListaTiendasSeguidasPorUsuario";
+  static const seguimientoObtenerListaUsuarioQueSiguenTiendaAPI =
+      "api/SeguimientoTienda/ObtenerListaUsuarioQueSiguenTienda";
+  static const seguimientoAgregarSeguimientoTiendaAPI =
+      "api/SeguimientoTienda/AgregarSeguimientoTienda";
+  static const seguimientoDejarDeSeguirTiendaAPI =
+      "api/SeguimientoTienda/DejarDeSeguirTienda";
+
+  // Endpoints específicos de PRODUCTO
+  static const productoObtenerProductosPorTiendaAPI =
+      "api/producto/obtenerproductosportienda";
+  static const productoadminObtenerProductoMainAPI =
+      "api/productoadmin/obtenerproductomain";
+  static const productoadminEliminarProductoAPI =
+      "api/productoadmin/eliminarproducto";
+
+  // Endpoints específicos de PRODUCTO DESEADO
+  static const productodeseadoObtenerListaDeseadosPorUsuarioAPI =
+      "api/productodeseado/ObtenerListaDeseadosPorUsuario/";
+  static const productodeseadoObtenerListaUsuariosQueDeseanProductoAPI =
+      "api/productodeseado/ObtenerListaUsuariosQueDeseanProducto";
+  static const productodeseadoAgregarProductoDeseadoAPI =
+      "api/productodeseado/AgregarProductoDeseado";
+  static const productodeseadoEliminarProductoDeseadoAPI =
+      "api/productodeseado/EliminarProductoDeseado";
+
+  // Endpoints específicos de USUARIO Y REGISTRO
+  static const registroUsuarioAPI = "api/RegistroUsuario";
+  static const logoutAPI = "api/Logout/";
 }
