@@ -124,6 +124,14 @@ el usuario, para usar esto es un DELETE y se deben dar el id del usuario y el id
 seria api/usuario/id siendo id la clave primaria de usuario, creo que seria el correo
 en este caso.
 
+"api/usuario/CambiarContrasena/"; Se ingresa id de usuario con la nueva contraseña. Su uso
+seria http://192.168.1.91/api/usuario/CambiarContrasena/ y con un json de la forma:
+{
+  "usuario_id": 2,
+  "nueva_contrasena": "ola123"
+}
+
+
 ---------------------------Endpoints de Persona---------------------------------
 "api/persona/autenticacion/" Todavia esta en proceso de creación, recibe correo y contraseña y valida el permiso
 "api/persona/CerrarSesion/" Metodo post para cerrar sesion, todavia en proceso de creación
