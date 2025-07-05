@@ -56,4 +56,10 @@ class Config {
   // Endpoints específicos de USUARIO Y REGISTRO
   static const registroUsuarioAPI = "api/RegistroUsuario";
   static const logoutAPI = "api/Logout/";
+
+
+  static const itemCarritoAPI = "api/itemcarrito"; // Para agregar, actualizar o eliminar ítems del carrito
+  static const checkoutAPI = "api/checkout/"; // Para iniciar el pago
+  static const pagoAPI = "api/pago"; // Para consultar pagos
+  static const actualizarEstadoPagoAPI = "api/actualizar_estado_pago/"; // Para actualizar el estado del pago y vaciar carrito
 }
