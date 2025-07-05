@@ -96,6 +96,12 @@ productos en su pagina.
 una tienda especifica, despues del endpoint se ingresa el id de la tienda. Un ejemplo
 de uso seria GET 192.168.1.91/api/producto/obtenerproductosportienda/id siendo el id
 de la tienda.
+
+"api/producto/ObtenerProductosCarrito"; Esto es para obtener tooodos los productos del
+usuario que tiene en el carrito, un ejemplo de uso es el siguiente:
+http://192.168.1.91/api/producto/ObtenerProductosCarrito/?usuario_id=2 lo cual daria
+los productos del carrito del usuario con id 2.
+
 ---------------------------Endpoints de ProductoDeseado---------------------------------
 "api/productodeseado/ObtenerListaDeseadosPorUsuario/"; Esto se utiliza para
 obtener la lista de productos deseados por el usuario. Para utilizarlo deben poner
