@@ -6,31 +6,6 @@ Un ejemplo de esto es el "api/producto" que entrega todos los productos de la ba
 de datos (aunque en este caso particular los que tienen estado=1), asimismo, para
 llamar a un dato especifico de esa tabla basta con api/modelo/id.
 
-#cabros ver el de obtener productos del carrito, cambiar contraseña, 
-
-Metodos NUEVOS CHICOS de PersonaViewSet en el archivo views.py Esto permite el funcionamiento de los metodos de persona que están al final.
-Lo echo aqui para que todos lo tengan. Solo por siacaso.
-
-    @action(detail=False, methods=['post'])
-    def Autenticacion(self, request):
-        correo = request.data.get('correo')  
-        contraseña = request.data.get('contraseña')  
-        if not correo or not contraseña:
-            return Response({'error': 'Debes enviar correo y contraseña'}, status=400)
-        try:
-            usuario = Usuario.objects.get(correo=correo, contraseña=contraseña)
-            return Response({'message': 'Usuario autenticado exitosamente'}, status=200)
-        except Usuario.DoesNotExist:
-            return Response({'error': 'Usuario no encontrado o credenciales incorrectas'}, status=404)
-        
-    @action(detail=False, methods=['post'])
-    def CerrarSesion(self, request):
-
-        logout(request)
-        return Response({'message': 'Sesión cerrada exitosamente'}, status=status.HTTP_200_OK)
-
-
-
 -------------------------Endpoints de TIENDA-------------------------------------------
 "api/tienda": Entrega los atributos de todas las tiendas una por una. Un ejemplo
 seria get 192.168.1.91/api/tienda para obtener todas las tiendas de la base de datos
@@ -140,11 +115,9 @@ seria http://192.168.1.91/api/usuario/CambiarContrasena/ y con un json de la for
 
 
 ---------------------------Endpoints de Persona---------------------------------
-"api/persona/autenticacion/" Todavia esta en proceso de creación, recibe correo y contraseña y valida el permiso
-"api/persona/CerrarSesion/" Metodo post para cerrar sesion, todavia en proceso de creación
 
-"api/Login/" Metodo post para hacer login. Este si bien funciona, es el que viene por defecto y lo recomendable es hacer con los de la clase persona
-"api/Logout/" Metodo post para hace Logout. Lo mismo de arriba.
+"api/Login/login-usuario" Metodo post para hacer login. En el body se pone correo y contraseña
+"api/Logout/logout-usuario" Metodo post para hace Logout. Se pone el correo.
 
 --------------------------Endpoints de Tipo Categorias---------------------------
  "api/tipocategoria"; obtiene todas las categorias existentes en la base de datos
