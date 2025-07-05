@@ -118,7 +118,14 @@ para usarlo deben dar el id del usuario y el id del producto que se desea.
 el usuario, para usar esto es un DELETE y se deben dar el id del usuario y el id del producto
 
 ---------------------------Endpoints de Usuario y Registro---------------------------------
-"api/RegistroUsuario"; esto se ocupa con un POST para ingresar un usuario al sistema
+"api/usuario/CrearUsuario"; esto se ocupa con un POST para ingresar un usuario al sistema
+el ejemplo es este, el nombre el correo y la contraseña con obligatorios.
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "correo": "juan@ejemplo.com",
+  "contrasena": "miclave123"
+}
 
 "api/usuario/"; obtiene a todos los usuarios de la bdd y si quieren uno especifico
 seria api/usuario/id siendo id la clave primaria de usuario, creo que seria el correo
