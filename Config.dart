@@ -6,7 +6,7 @@ class Config {
   static const obtenerProductoMainAPI = "api/producto/obtenerproductomain";
   static const productoAPI = "api/producto";
   static const tiendaAPI = "api/tienda";
-  static const loginAPI = "api/login/";
+  static const loginAPI = "api/Login/login-usuario";
   static const obtenertokenAPI = "api/api-token-auth/";
   static const productoadminAPI = "api/productoadmin/";
   static const usuarioAPI = "api/usuario/";
@@ -53,13 +53,18 @@ class Config {
   static const productodeseadoEliminarProductoDeseadoAPI =
       "api/productodeseado/EliminarProductoDeseado";
 
+  // Endpoints específicos de Carrito
+  static const ObtenerProductoCarritoAPI =
+      "api/producto/ObtenerProductosCarrito";
+
   // Endpoints específicos de USUARIO Y REGISTRO
   static const registroUsuarioAPI = "api/RegistroUsuario";
-  static const logoutAPI = "api/Logout/";
-
-
-  static const itemCarritoAPI = "api/itemcarrito"; // Para agregar, actualizar o eliminar ítems del carrito
+  static const logoutAPI = "api/Logout/logout-usuario";
+  static const cambiarcontrasenaAPI = "api/usuario/CambiarContrasena/";
+  static const itemCarritoAPI =
+      "api/itemcarrito"; // Para agregar, actualizar o eliminar ítems del carrito
   static const checkoutAPI = "api/checkout/"; // Para iniciar el pago
   static const pagoAPI = "api/pago"; // Para consultar pagos
-  static const actualizarEstadoPagoAPI = "api/actualizar_estado_pago/"; // Para actualizar el estado del pago y vaciar carrito
+  static const actualizarEstadoPagoAPI =
+      "api/actualizar_estado_pago/"; // Para actualizar el estado del pago y vaciar carrito
 }
