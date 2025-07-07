@@ -28,6 +28,19 @@ producto, abajo mostrar el logo de la tienda y su nombre.
 "api/tienda/ObtenerDetallesTienda"; Esto se utiliza para obtener los detalles de una
 tienda especifica dando el id de la tienda.
 
+"api/tienda/PublicarProductoEnTienda"; Esto se utiliza para que una tienda publique producto, esto pide en un json 
+el id del usuario que esta subiendo el producto, con este busca a que tienda esta asociado para asignarle esa tienda al
+producto subido. Ademas de eso se pone lo demas. Un ejemplo para esto es:
+{
+  "usuario_id": 4,
+  "nombre_producto": "Producto Ejemplo",
+  "descripcion_producto": "Descripción del producto",
+  "stock": 10,
+  "precio": 30000,
+  "tipo_categoria_id": "Lana",
+  "foto_producto": "http://192.168.1.91/media/images/totoritos.png"
+}
+
 -------------------------Endpoints de SEGUIMIENTO TIENDA----------------------------------
 "api/seguimientotienda"; Este Entrega la id del seguidor y el id de la tienda que sigue.
 
